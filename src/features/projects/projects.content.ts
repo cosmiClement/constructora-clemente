@@ -1,0 +1,40 @@
+import type { ProjectData } from '@/types/project.types'
+
+export const featuredProjects: ProjectData[] = [
+  {
+    id: 'casa-nube',
+    name: 'Casa Nube',
+    location: 'Valle alto',
+    concept: 'Una vivienda suspendida entre patio, sombra y horizonte.',
+    problem: 'El terreno tenía una pendiente agresiva y exposición solar extrema.',
+    solution: 'Creamos plataformas habitables, aleros profundos y una piel mineral ventilada.',
+    result: 'Una casa fresca, silenciosa y abierta al paisaje sin perder privacidad.',
+    image: 'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1800&auto=format&fit=crop',
+    tags: ['Residencial', 'Sostenible', 'Diseño Bioclimático'],
+    year: 2023,
+  },
+  {
+    id: 'atelier-piedra',
+    name: 'Atelier Piedra',
+    location: 'Centro histórico',
+    concept: 'Un espacio de trabajo que combina memoria patrimonial y precisión contemporánea.',
+    problem: 'La estructura original necesitaba actualizarse sin borrar su carácter.',
+    solution: 'Conservamos muros nobles y añadimos vidrio, acero y luz cenital controlada.',
+    result: 'Un atelier flexible con presencia institucional y escala humana.',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1800&auto=format&fit=crop',
+    tags: ['Comercial', 'Restauración', 'Contemporáneo'],
+    year: 2022,
+  },
+  {
+    id: 'terraza-lineal',
+    name: 'Terraza Lineal',
+    location: 'Ladera urbana',
+    concept: 'Una secuencia social que transforma un desnivel en experiencia.',
+    problem: 'El área exterior estaba fragmentada y sin continuidad de uso.',
+    solution: 'Diseñamos una cinta habitable con cocina exterior, estar y mirador.',
+    result: 'Un paisaje doméstico que multiplica reuniones, vistas y valor del inmueble.',
+    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?q=80&w=1800&auto=format&fit=crop',
+    tags: ['Exterior', 'Paisajismo', 'Multifuncional'],
+    year: 2024,
+  },
+]
