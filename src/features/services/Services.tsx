@@ -63,7 +63,7 @@ export function Services() {
                 {service.id}
               </div>
               <div>
-                <h3 className="mb-4 text-xl font-medium tracking-wide">
+                <h3 className="mb-4 font-serif text-xl font-medium tracking-wide">
                   {service.title}
                 </h3>
                 <p className="text-sm font-light leading-relaxed text-stone-400">
