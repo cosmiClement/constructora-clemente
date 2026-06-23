@@ -43,6 +43,14 @@ export default {
         'gradient-fade': 'linear-gradient(180deg, rgba(245, 245, 244, 0.02) 0%, rgba(10, 10, 10, 0) 100%)',
         'gradient-bottom': 'linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 1) 100%)',
       },
+      letterSpacing: {
+        'premium': '0.2em',
+        'premium-wide': '0.3em',
+        'premium-xl': '0.35em',
+      },
+      transitionTimingFunction: {
+        'premium': 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1)',

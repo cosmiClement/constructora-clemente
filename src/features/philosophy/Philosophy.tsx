@@ -8,7 +8,7 @@ export function Philosophy() {
   const sectionRef = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['top 75%', 'center center']
+    offset: ['0% 75%', '50% 50%'] as const
   })
 
   const lineScale = useTransform(scrollYProgress, [0, 0.5], [0, 1])
@@ -22,7 +22,7 @@ export function Philosophy() {
           <div className="flex flex-col justify-start lg:col-span-4">
             <motion.div 
               style={{ opacity, y: yOffset }}
-              className="mb-8 text-xs font-medium uppercase tracking-[0.2em] text-stone-400"
+              className="mb-8 text-xs font-medium uppercase tracking-premium text-stone-400"
             >
               {philosophyContent.eyebrow}
             </motion.div>

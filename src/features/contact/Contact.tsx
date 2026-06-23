@@ -42,7 +42,7 @@ export function Contact() {
       <Container>
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
           <div ref={infoRef} className="flex flex-col">
-            <div className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-stone-400">
+            <div className="mb-6 text-xs font-medium uppercase tracking-premium text-stone-400">
               {contactContent.eyebrow}
             </div>
             <h2 className="mb-8 font-serif text-4xl leading-tight md:text-5xl lg:text-6xl">
@@ -67,7 +67,11 @@ export function Contact() {
             </div>
           </div>
 
-          <form ref={formRef} className="flex flex-col gap-6 bg-white/[0.02] backdrop-blur-[32px] border border-white/10 p-8 md:p-12 shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.15)]">
+          <form
+            ref={formRef}
+            onSubmit={(e) => e.preventDefault()}
+            className="flex flex-col gap-6 border border-white/15 bg-stone-900/60 p-8 shadow-premium backdrop-blur-lg md:p-12"
+          >
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-xs uppercase tracking-wider text-stone-400">
@@ -76,7 +80,7 @@ export function Contact() {
                 <input
                   type="text"
                   id="name"
-                  className="border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-white"
+                  className="border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-gold"
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -86,19 +90,29 @@ export function Contact() {
                 <input
                   type="email"
                   id="email"
-                  className="border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-white"
+                  className="border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-gold"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div className="flex flex-col gap-2">
+                <label htmlFor="phone" className="text-xs uppercase tracking-wider text-stone-400">
+                  {contactContent.form.phone}
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  className="border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-gold"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
                 <label htmlFor="projectType" className="text-xs uppercase tracking-wider text-stone-400">
                   {contactContent.form.projectType}
                 </label>
                 <select
                   id="projectType"
-                  className="border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-white"
+                  className="border-b border-white/20 bg-stone-900 py-2 text-white outline-none transition-colors focus:border-gold"
                 >
                   <option value="" className="bg-stone-900 text-white">Seleccione una opción</option>
                   <option value="residencial" className="bg-stone-900 text-white">Residencial</option>
@@ -106,13 +120,16 @@ export function Contact() {
                   <option value="remodelacion" className="bg-stone-900 text-white">Remodelación</option>
                 </select>
               </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div className="flex flex-col gap-2">
                 <label htmlFor="budget" className="text-xs uppercase tracking-wider text-stone-400">
                   {contactContent.form.budget}
                 </label>
                 <select
                   id="budget"
-                  className="border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-white"
+                  className="border-b border-white/20 bg-stone-900 py-2 text-white outline-none transition-colors focus:border-gold"
                 >
                   <option value="" className="bg-stone-900 text-white">Rango estimado</option>
                   <option value="low" className="bg-stone-900 text-white">$50k - $100k</option>
@@ -120,17 +137,16 @@ export function Contact() {
                   <option value="high" className="bg-stone-900 text-white">$500k+</option>
                 </select>
               </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label htmlFor="location" className="text-xs uppercase tracking-wider text-stone-400">
-                {contactContent.form.location}
-              </label>
-              <input
-                type="text"
-                id="location"
-                className="border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-white"
-              />
+              <div className="flex flex-col gap-2">
+                <label htmlFor="location" className="text-xs uppercase tracking-wider text-stone-400">
+                  {contactContent.form.location}
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  className="border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-gold"
+                />
+              </div>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -140,11 +156,11 @@ export function Contact() {
               <textarea
                 id="message"
                 rows={4}
-                className="resize-none border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-white"
+                className="resize-none border-b border-white/20 bg-transparent py-2 text-white outline-none transition-colors focus:border-gold"
               ></textarea>
             </div>
 
-            <Button type="button" className="mt-4 w-full md:w-auto self-start">
+            <Button type="submit" className="mt-4 w-full self-start md:w-auto">
               {contactContent.form.submit}
             </Button>
           </form>

@@ -44,7 +44,7 @@ export function Faq() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <div className="sticky top-32">
-              <div className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-stone-400">
+              <div className="mb-6 text-xs font-medium uppercase tracking-premium text-stone-400">
                 {faqContent.eyebrow}
               </div>
               <h2 className="font-serif text-4xl leading-tight md:text-5xl">

@@ -53,6 +53,13 @@ export const heroContent = {
     },
   ],
 
+  social: {
+    whatsapp: { number: '71714425', label: 'whatsapp' },
+    tiktok: { url: 'https://tiktok.com/@constructoraclemente', label: 'TikTok' },
+    instagram: { url: 'https://instagram.com/constructoraclemente', label: 'Instagram' },
+    facebook: { url: 'https://facebook.com/constructoraclemente', label: 'Facebook' },
+  },
+
   // Keywords de schema para enriquecer el contexto semántico
   schemaKeywords: [
     'constructora cochabamba',

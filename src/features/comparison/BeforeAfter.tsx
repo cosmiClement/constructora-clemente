@@ -1,18 +1,56 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Container } from '@/components/ui/Container'
+import { gsap } from '@/lib/gsap'
 
 export function BeforeAfter() {
   const [position, setPosition] = useState(52)
+  const sectionRef = useRef<HTMLElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+  const imageContainerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header animation
+      gsap.from(headerRef.current, {
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 80%',
+        },
+      })
+
+      // Image container clip-path reveal
+      gsap.fromTo(
+        imageContainerRef.current,
+        { clipPath: 'inset(0 100% 0 0)' },
+        {
+          clipPath: 'inset(0 0% 0 0)',
+          ease: 'power2.inOut',
+          scrollTrigger: {
+            trigger: imageContainerRef.current,
+            start: 'top 85%',
+            end: 'center 60%',
+            scrub: 1,
+          },
+        }
+      )
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
 
   return (
-    <section id="comparison" className="scroll-mt-16 bg-stone-100 py-28 text-stone-950 md:py-40">
+    <section id="comparison" ref={sectionRef} className="scroll-mt-16 overflow-hidden bg-stone-100 py-28 text-stone-950 md:py-40">
       <Container>
-        <div className="mb-12 max-w-2xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-stone-500">Antes y después</p>
+        <div ref={headerRef} className="mb-12 max-w-2xl">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-premium-wide text-stone-500">Antes y después</p>
           <h2 className="font-serif text-4xl leading-tight md:text-6xl">La transformación se entiende al tocarla.</h2>
         </div>
 
-        <div className="relative aspect-[16/9] overflow-hidden bg-stone-300">
+        <div ref={imageContainerRef} className="relative aspect-[16/9] w-full overflow-hidden bg-stone-300">
           <img
             src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?q=80&w=1800&auto=format&fit=crop"
             alt="Espacio antes de la intervención"

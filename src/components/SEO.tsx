@@ -132,10 +132,9 @@ export function SEO({
     schema,
     noindex = false,
 }: SEOProps) {
-    // Merge schemas si se proporciona uno adicional
     const schemas = [localBusinessSchema, websiteSchema]
     if (schema) {
-        schemas.push(schema)
+        schemas.push(schema as (typeof localBusinessSchema))
     }
 
     return (

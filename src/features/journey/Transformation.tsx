@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Container } from '@/components/ui/Container'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
 import { transformationStages } from './journey.content'
 
@@ -46,7 +47,7 @@ export function Transformation() {
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24 lg:px-12">
+      <Container className="relative z-10 flex h-full flex-col justify-end pb-24">
         <div className="relative h-44 max-w-2xl">
           {transformationStages.map((stage, index) => (
             <div
@@ -58,7 +59,7 @@ export function Transformation() {
                 transform: `translateY(${index === 0 ? 0 : 20}px)`,
               }}
             >
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-stone-400">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-premium-wide text-stone-400">
                 {String(index + 1).padStart(2, '0')} / {String(transformationStages.length).padStart(2, '0')}
               </p>
               <h3 className="mb-4 font-serif text-4xl text-white md:text-5xl">{stage.title}</h3>
@@ -73,7 +74,7 @@ export function Transformation() {
             <div className="animate-progress-line absolute left-0 top-0 h-full w-full origin-left bg-stone-100" />
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
