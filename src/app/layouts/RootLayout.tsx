@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { CustomCursor } from '@/components/animations/CustomCursor'
 import { Footer } from '@/components/layout/Footer'
 import { Navbar } from '@/components/layout/Navbar'
+import { SectionPagination } from '@/components/ui/SectionPagination'
 
 interface RootLayoutProps {
   children: ReactNode
@@ -14,6 +15,7 @@ export function RootLayout({ children }: RootLayoutProps) {
       <CustomCursor />
       <div className="relative min-h-screen w-full bg-background text-foreground">
         <Navbar />
+        <SectionPagination />
         <main>{children}</main>
         <Footer />
       </div>

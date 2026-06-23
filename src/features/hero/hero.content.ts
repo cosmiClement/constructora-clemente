@@ -1,5 +1,3 @@
-import casaHero from '@/assets/images/casita.mp4'
-
 export const heroContent = {
   // Eyebrow con keywords de servicio para SEO semántico
   eyebrow: 'ARQUITECTURA • CONSTRUCCIÓN • DIRECCIÓN DE OBRA',
@@ -20,7 +18,7 @@ export const heroContent = {
   secondaryCtaHref: '#contact',
 
   // Video de fondo
-  video: casaHero,
+  video: 'https://res.cloudinary.com/ducnrrucs/video/upload/v1782256474/videocasa_u8rdsn.mp4',
 
   // Badge de ubicación para SEO local y confianza
   locationBadge: {

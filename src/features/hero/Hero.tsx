@@ -219,7 +219,7 @@ export function Hero() {
                 Proyectos
                 <ArrowRight
                   size={16}
-                  className="ml-2 transition-transform group-hover:translate-x-1"
+                  className="transition-transform group-hover:translate-x-1"
                   aria-hidden="true"
                 />
               </Button>
@@ -232,7 +232,7 @@ export function Hero() {
                 className="min-h-12 px-6"
                 aria-label="Contactar con Constructora Clemente"
               >
-                <Phone size={15} className="mr-2" aria-hidden="true" />
+                <Phone size={15} aria-hidden="true" />
                 Contacto
               </Button>
             </motion.div>

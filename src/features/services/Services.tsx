@@ -9,17 +9,37 @@ export function Services() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(cardsRef.current, {
-        y: 80,
-        opacity: 0,
-        stagger: 0.15,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 60%',
-          end: 'center 40%',
-          scrub: 1,
-        },
+      const mm = gsap.matchMedia()
+
+      mm.add('(min-width: 1024px)', () => {
+        gsap.from(cardsRef.current, {
+          y: 120,
+          scale: 0.7,
+          opacity: 0,
+          rotation: (i) => (i % 2 === 0 ? -3 : 3),
+          filter: 'blur(8px)',
+          stagger: 0.12,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 70%',
+            end: 'center 30%',
+            scrub: 1.2,
+          },
+        })
+      })
+
+      mm.add('(max-width: 1023px)', () => {
+        gsap.from(cardsRef.current, {
+          y: 60,
+          opacity: 0,
+          stagger: 0.1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 70%',
+          },
+        })
       })
     }, sectionRef)
 

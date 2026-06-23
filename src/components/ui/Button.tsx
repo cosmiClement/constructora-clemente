@@ -1,5 +1,4 @@
 import { useRef, type ButtonHTMLAttributes } from 'react'
-import { ArrowUpRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useGlobalStore } from '@/store/globalStore'
 
@@ -50,8 +49,7 @@ export function Button({ children, className, variant = 'light', ...props }: But
         onMouseEnter?.(event as unknown as React.MouseEvent<HTMLButtonElement, MouseEvent>)
       }}
     >
-      <span className="relative z-10">{children}</span>
-      <ArrowUpRight aria-hidden="true" size={16} strokeWidth={1.5} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+      <span className="relative z-10 inline-flex items-center gap-2">{children}</span>
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
     </button>
   )

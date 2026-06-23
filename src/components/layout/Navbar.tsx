@@ -171,7 +171,7 @@ export function Navbar() {
           onMouseLeave={() => setCursorType('default')}
         >
           Consulta
-          <ArrowUpRight size={14} className="ml-1" aria-hidden="true" />
+          <ArrowUpRight size={14} aria-hidden="true" />
         </Button>
 
         {/* ====== MOBILE MENU TOGGLE ====== */}

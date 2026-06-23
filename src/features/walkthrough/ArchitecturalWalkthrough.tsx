@@ -11,43 +11,76 @@ export function ArchitecturalWalkthrough() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Header fade in
-      gsap.from(headerRef.current, {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-        },
-      })
+      const mm = gsap.matchMedia()
 
-      // Staggered reveal for articles
-      articlesRef.current.forEach((article) => {
-        gsap.from(article, {
-          y: 80,
+      mm.add('(min-width: 768px)', () => {
+        gsap.from(headerRef.current, {
+          y: 40,
           opacity: 0,
-          duration: 1.2,
+          duration: 1,
           ease: 'power3.out',
           scrollTrigger: {
-            trigger: article,
-            start: 'top 85%',
+            trigger: sectionRef.current,
+            start: 'top 80%',
           },
+        })
+
+        articlesRef.current.forEach((article, index) => {
+          gsap.from(article, {
+            x: index % 2 === 0 ? -200 : 200,
+            rotationY: index % 2 === 0 ? 15 : -15,
+            scale: 0.85,
+            opacity: 0,
+            filter: 'blur(6px)',
+            duration: 1.4,
+            ease: 'power4.out',
+            scrollTrigger: {
+              trigger: article,
+              start: 'top 85%',
+              end: 'top 40%',
+              scrub: 1.5,
+            },
+          })
+        })
+
+        imagesRef.current.forEach((img) => {
+          gsap.to(img, {
+            yPercent: 20,
+            scale: 1.08,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: img.parentElement,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+            },
+          })
         })
       })
 
-      // Parallax for images
-      imagesRef.current.forEach((img) => {
-        gsap.to(img, {
-          yPercent: 15,
-          ease: 'none',
+      mm.add('(max-width: 767px)', () => {
+        gsap.from(headerRef.current, {
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power3.out',
           scrollTrigger: {
-            trigger: img.parentElement,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
+            trigger: sectionRef.current,
+            start: 'top 80%',
           },
+        })
+
+        articlesRef.current.forEach((article) => {
+          gsap.from(article, {
+            y: 60,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: article,
+              start: 'top 85%',
+            },
+          })
         })
       })
     }, sectionRef)
