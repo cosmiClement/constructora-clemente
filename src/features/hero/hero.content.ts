@@ -28,8 +28,8 @@ export const heroContent = {
 
   // Social proof - años de experiencia visible inmediatamente
   experienceBadge: {
-    text: 'Más de 10 años de experiencia',
-    highlight: '10+',
+    text: 'Más de 15 años de experiencia',
+    highlight: '15+',
   },
 
   // Estadísticas de confianza para el hero
@@ -40,7 +40,7 @@ export const heroContent = {
       description: 'Residenciales, comerciales e institucionales',
     },
     {
-      value: '10+',
+      value: '15+',
       label: 'Años de experiencia',
       description: 'En el mercado cochabambino',
     },
