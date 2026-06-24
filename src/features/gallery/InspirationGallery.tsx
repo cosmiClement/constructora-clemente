@@ -94,7 +94,7 @@ export function InspirationGallery() {
             <figure 
               key={item.id} 
               ref={(el) => addToRefs(el, index)}
-              className={cn('mb-5 break-inside-avoid overflow-hidden bg-stone-900', index % 2 === 0 ? 'pt-0' : 'pt-10')}
+              className={cn('mb-5 break-inside-avoid overflow-hidden bg-stone-900', index % 2 === 0 ? 'pt-0' : 'pt-0 md:pt-10')}
             >
               <img src={item.image} alt={item.title} className="w-full object-cover transition duration-700 hover:scale-105" />
               <figcaption className="flex items-center justify-between p-5 text-sm text-stone-400">

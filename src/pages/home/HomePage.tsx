@@ -9,7 +9,6 @@ import { ArchitecturalWalkthrough } from '@/features/walkthrough/ArchitecturalWa
 import { InspirationGallery } from '@/features/gallery/InspirationGallery'
 import { BeforeAfter } from '@/features/comparison/BeforeAfter'
 import { PremiumStats } from '@/features/statistics/PremiumStats'
-import { MaterialLibrary } from '@/features/materials/MaterialLibrary'
 import { Faq } from '@/features/faq/Faq'
 import { Contact } from '@/features/contact/Contact'
 import { FinalCTA } from '@/features/cta/FinalCTA'
@@ -36,7 +35,7 @@ export function HomePage() {
         <InspirationGallery />
         <BeforeAfter />
         <PremiumStats />
-        <MaterialLibrary />
+        {/* <MaterialLibrary /> */}
         <Faq />
         <Contact />
         <FinalCTA />

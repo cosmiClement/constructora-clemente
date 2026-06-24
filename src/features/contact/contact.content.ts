@@ -15,6 +15,6 @@ export const contactContent = {
   contactInfo: {
     address: 'Av. Arquitectura 123, Distrito Financiero',
     email: 'proyectos@constructoraclemente.com',
-    phone: '+1 (555) 123-4567',
+    phone: '+ (591) 71714425',
   }
 }

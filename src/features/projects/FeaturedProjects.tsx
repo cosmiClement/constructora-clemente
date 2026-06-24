@@ -118,7 +118,7 @@ export function FeaturedProjects() {
             initial="enter"
             animate="center"
             exit="exit"
-            className="grid min-h-[560px] grid-cols-1 lg:grid-cols-2"
+            className="grid min-h-[400px] grid-cols-1 md:min-h-[560px] lg:grid-cols-2"
           >
             {/* Left: text */}
             <div className="relative flex flex-col justify-between overflow-hidden border-r border-white/10">

@@ -48,7 +48,7 @@ export function Transformation() {
       </div>
 
       <Container className="relative z-10 flex h-full flex-col justify-end pb-24">
-        <div className="relative h-44 max-w-2xl">
+        <div className="relative min-h-[176px] max-w-2xl md:h-44">
           {transformationStages.map((stage, index) => (
             <div
               key={stage.id}

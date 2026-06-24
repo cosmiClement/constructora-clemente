@@ -52,13 +52,13 @@ export function BeforeAfter() {
 
         <div ref={imageContainerRef} className="relative aspect-[16/9] w-full overflow-hidden bg-stone-300">
           <img
-            src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?q=80&w=1800&auto=format&fit=crop"
+            src="https://res.cloudinary.com/dctrmbmh4/image/upload/v1782310058/antes_s3xzxy.png"
             alt="Espacio antes de la intervención"
             className="absolute inset-0 h-full w-full object-cover grayscale"
           />
           <div className="absolute inset-0 overflow-hidden" style={{ width: `${position}%` }}>
             <img
-              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb3?q=80&w=1800&auto=format&fit=crop"
+              src="https://res.cloudinary.com/dctrmbmh4/image/upload/v1782309736/Despues_g2h0pg.png"
               alt="Espacio después de la intervención"
               className="h-full w-[calc(100vw-3rem)] max-w-7xl object-cover md:w-[calc(100vw-6rem)]"
             />

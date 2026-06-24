@@ -33,7 +33,7 @@ export const featuredProjects: ProjectData[] = [
     problem: 'El área exterior estaba fragmentada y sin continuidad de uso.',
     solution: 'Diseñamos una cinta habitable con cocina exterior, estar y mirador.',
     result: 'Un paisaje doméstico que multiplica reuniones, vistas y valor del inmueble.',
-    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?q=80&w=1800&auto=format&fit=crop',
+    image: 'https://res.cloudinary.com/dctrmbmh4/image/upload/v1782309736/Despues_g2h0pg.png',
     tags: ['Exterior', 'Paisajismo', 'Multifuncional'],
     year: 2024,
   },

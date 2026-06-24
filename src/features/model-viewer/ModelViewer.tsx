@@ -73,7 +73,7 @@ export function ModelViewer() {
             </div>
           </div>
 
-          <div ref={canvasColRef} className="h-[520px] w-full overflow-hidden bg-stone-900 lg:col-span-8">
+          <div ref={canvasColRef} className="h-[300px] w-full overflow-hidden bg-stone-900 md:h-[520px] lg:col-span-8">
             <Canvas camera={{ position: [4, 3, 5], fov: 38 }}>
               <ambientLight intensity={0.55} />
               <directionalLight position={[5, 6, 4]} intensity={2.4} />
